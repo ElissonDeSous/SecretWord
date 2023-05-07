@@ -7,7 +7,7 @@ export const wordsList = {
     alimento: ["Arroz", "Feijão", "Carne", "Leite", "Ovo"],
     filmes: ["HarryPotter", "Click", "Vingadores", "Shrek", "Titanic"],
     series: ["Supernatural", "breakingBad", "Dark", "Arcane", ""],
-    pais: ["Brasil", "canada", "Portugal", "China", "Japão"],
+    país: ["Brasil", "canada", "Portugal", "China", "Japão"],
     TimesDeFutebol: ["SãoPaulo", "Palmeiras", "Corinthians", "Flamengo", "Santos"],
     anime: ["OnePiece", "Naruto", "DemonSlayer", "FairyTail", "BokuNoHero"],
 
