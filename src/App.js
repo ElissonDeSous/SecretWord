@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css'
 import Start  from './componentes/startScreen'
 import Games from './componentes/Games'
 import GamesOver from './componentes/GamesOver'
@@ -20,7 +21,7 @@ function App() {
   const [letrasAdivinha,setLetrasAdivinha] = useState([])
   const [letrasErradas, setLetrasErradas] = useState([])
   const [Chances,setChances] = useState(3)
-  const [score , setScore] = useState(-200)
+  const [score , setScore] = useState(100)
 
   const escolhacategory = useCallback( () =>{
     // escolha aleatoria a categoria
