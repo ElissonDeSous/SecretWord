@@ -1,0 +1,39 @@
+.game h1{
+    font-size: 1.2em;
+}
+.pontos span{
+    font-weight: bold;
+}
+.dica span{
+    color: #ecfa00;
+}
+.word-container{
+    margin: 1.5em;
+    padding: 1.5em;
+    border: 20px solid #ecfa00;
+    display: flex;
+}
+.letra,.quadroEmBranco{
+    font-size: 70px;
+    line-height: 1.5em;
+    border: solid 3px #000;
+    height: 100px;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-weight: bold;
+    color: black;
+}
+.letraContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.letraContainer input{
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    text-align: center;
+    margin-right: 1em;
+}
