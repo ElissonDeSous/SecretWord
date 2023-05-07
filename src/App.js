@@ -21,7 +21,7 @@ function App() {
   const [letrasAdivinha,setLetrasAdivinha] = useState([])
   const [letrasErradas, setLetrasErradas] = useState([])
   const [Chances,setChances] = useState(3)
-  const [score , setScore] = useState(0)
+  const [score , setScore] = useState(-100)
 
   const escolhacategory = useCallback( () =>{
     // escolha aleatoria a categoria
