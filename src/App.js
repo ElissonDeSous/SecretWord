@@ -1,5 +1,4 @@
 import './App.css';
-import './index.css'
 import Start  from './componentes/startScreen'
 import Games from './componentes/Games'
 import GamesOver from './componentes/GamesOver'
