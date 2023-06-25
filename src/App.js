@@ -20,7 +20,7 @@ function App() {
   const [letrasAdivinha,setLetrasAdivinha] = useState([])
   const [letrasErradas, setLetrasErradas] = useState([])
   const [Chances,setChances] = useState(3)
-  const [score , setScore] = useState(-200)
+  const [score , setScore] = useState(0)
 
   const escolhacategory = useCallback( () =>{
     // escolha aleatoria a categoria
@@ -40,7 +40,6 @@ function App() {
     let wordLetras = word.split("")
     wordLetras = wordLetras.map((i)=> i.toLowerCase())
     
-
     setEscolhaCategory(category)
     setEscolha(word)
     setLetras(wordLetras)
@@ -90,7 +89,7 @@ useEffect(()=> {
   
    const Letrasunicas = [...new Set(letras)]
    
-   if(letrasAdivinha.length === Letrasunicas.length)
+   if(letrasAdivinha.length === Letrasunicas.length && gameEstagios === estagios[1].name)
    {
     setScore((actualScore) => (actualScore += 100))
 
@@ -102,7 +101,7 @@ useEffect(()=> {
 } ,[letrasAdivinha,letras,StartGame])
   const reiniciar = ()=> {
 
-    setScore(0)
+    setScore()
     setChances(3)
     setEstagio(estagios[0].name)
   }
