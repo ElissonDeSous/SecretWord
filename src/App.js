@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css'
 import Start  from './componentes/startScreen'
 import Games from './componentes/Games'
 import GamesOver from './componentes/GamesOver'
@@ -12,6 +13,8 @@ const estagios = [
   {id:3,name : 'end'},
 ]
 function App() {
+
+
   const [gameEstagios, setEstagio] = useState(estagios[0].name)
   const [words] = useState(wordsList)
   const [escolha, setEscolha] = useState("")
@@ -40,10 +43,12 @@ function App() {
     let wordLetras = word.split("")
     wordLetras = wordLetras.map((i)=> i.toLowerCase())
     
+   
     setEscolhaCategory(category)
     setEscolha(word)
     setLetras(wordLetras)
     setEstagio(estagios[1].name)
+    
   },[escolhacategory])
 
   const VerifyLetter = (LetrasAdvinhar) =>{
@@ -67,9 +72,13 @@ function App() {
 
       setChances((actualChances) => actualChances -1);
     }
-    
+   
   }
-
+  const Reiniciar = () => {
+    setScore(0);
+    setChances(3);
+    setEstagio(estagios[0].name);
+  };
   const  clearLettersStates = () =>{
     setLetrasAdivinha([])
     setLetrasErradas([])
@@ -97,14 +106,8 @@ useEffect(()=> {
     
    }
    
-
-} ,[letrasAdivinha,letras,StartGame])
-  const reiniciar = ()=> {
-
-    setScore()
-    setChances(3)
-    setEstagio(estagios[0].name)
-  }
+},[letrasAdivinha,letras,StartGame])
+  
 
   return (
     <div className="App">
@@ -119,10 +122,10 @@ useEffect(()=> {
      LetrasAdvinhar = {letrasAdivinha}
      letrasErradas = {letrasErradas}
      chances = {Chances}
-     Score = {score}/>}
+     score = {score}/>}
 
 
-    {gameEstagios === 'end' && <GamesOver Reiniciar =  {reiniciar} Score = {score}/>}
+    {gameEstagios === 'end' && <GamesOver Reiniciar = {Reiniciar} Score = {score}/>}
     </div>
   );
 }
